@@ -54,5 +54,9 @@ def sobre():
     return render_template('sobre.html')
 
 
+# Esta parte é importante para o Vercel
 if __name__ == '__main__':
     app.run(debug=True)
+else:
+    # Isso é necessário para o Vercel
+    app = app
