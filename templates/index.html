@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h2>Bem-vindo ao Pesqueiro Serra Azul</h2>
+        <p>O melhor lugar para pescar, relaxar e se conectar com a natureza. Venha vivenciar momentos inesquecíveis com sua família e amigos em meio à beleza natural da Serra Azul.</p>
+        <a href="{{ url_for('sobre') }}" class="btn pulse"><i class="fas fa-fish"></i> Conheça Nosso Pesqueiro</a>
+    </div>
+</section>
+
+<section class="highlights">
+    <h2>Experiências Incríveis</h2>
+    <div class="cards">
+        <div class="card">
+            <div class="highlight-badge">Popular</div>
+            <h3><i class="fas fa-fish"></i> Pesque e Pague</h3>
+            <p>Venha pescar em nossos tanques bem cuidados e repletos de peixes. Equipamentos disponíveis para aluguel e toda a estrutura para você aproveitar o dia.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-utensils"></i> Restaurante</h3>
+            <p>Experimente nossas deliciosas porções de peixes frescos e outras especialidades preparadas com ingredientes de qualidade por nossos chefs.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-swimming-pool"></i> Área de Lazer</h3>
+            <p>Aproveite nossa área de lazer completa com piscinas, churrasqueiras, parquinho para crianças e amplo espaço verde para relaxar.</p>
+        </div>
+    </div>
+</section>
+
+<section class="upcoming-events">
+    <h2>Próximos Eventos</h2>
+    <div class="event">
+        <h3><i class="fas fa-trophy"></i> Torneio de Pesca</h3>
+        <p class="date"><i class="far fa-calendar-alt"></i> 28/06/2025</p>
+        <p>Grande torneio de pesca com premiações especiais para o maior peixe e outras categorias. Inscrições abertas para pescadores de todos os níveis.</p>
+        <a href="{{ url_for('eventos') }}" class="btn small"><i class="fas fa-calendar-check"></i> Ver Todos os Eventos</a>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="section-header">
+        <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <p>"Um lugar incrível para passar o dia com a família. Os peixes são abundantes e o restaurante serve pratos deliciosos. Voltaremos com certeza!"</p>
+            <h3>Carlos Silva</h3>
+        </div>
+        <div class="card">
+            <p>"Frequento o Pesqueiro Serra Azul há anos e nunca me decepcionei. O ambiente é lindo, a equipe é atenciosa e a experiência de pesca é sempre excelente."</p>
+            <h3>Marina Santos</h3>
+        </div>
+        <div class="card">
+            <p>"Participei do último torneio e foi muito bem organizado. As instalações são modernas e o ambiente é perfeito para quem gosta de pescar."</p>
+            <h3>Pedro Oliveira</h3>
+        </div>
+    </div>
+</section>
+{% endblock %}

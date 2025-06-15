@@ -1,0 +1,40 @@
+<!-- templates/cardapio.html -->
+{% extends 'base.html' %}
+
+{% block title %}Cardápio{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>Cardápio</h2>
+    <p>Confira nossas deliciosas porções e bebidas.</p>
+</section>
+
+<section class="menu-section">
+    <h3>Porções</h3>
+    <div class="menu-items">
+        {% for porcao in porcoes %}
+        <div class="menu-item">
+            <div class="item-header">
+                <h4>{{ porcao.nome }}</h4>
+                <span class="price">{{ porcao.preco }}</span>
+            </div>
+            <p>{{ porcao.descricao }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="menu-section">
+    <h3>Bebidas</h3>
+    <div class="menu-items">
+        {% for bebida in bebidas %}
+        <div class="menu-item">
+            <div class="item-header">
+                <h4>{{ bebida.nome }}</h4>
+                <span class="price">{{ bebida.preco }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

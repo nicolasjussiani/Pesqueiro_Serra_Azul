@@ -1,0 +1,25 @@
+<!-- templates/eventos.html -->
+{% extends 'base.html' %}
+
+{% block title %}Eventos{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>Eventos</h2>
+    <p>Fique por dentro dos eventos e promoções especiais do Pesqueiro Serra Azul.</p>
+</section>
+
+<section class="events-list">
+    {% if eventos %}
+        {% for evento in eventos %}
+        <div class="event-card">
+            <h3>{{ evento.titulo }}</h3>
+            <p class="date">{{ evento.data }}</p>
+            <p>{{ evento.descricao }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-events">No momento não há eventos programados. Volte em breve!</p>
+    {% endif %}
+</section>
+{% endblock %}
